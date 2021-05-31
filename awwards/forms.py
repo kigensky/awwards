@@ -1,6 +1,6 @@
-from django.forms import ModelForm, HiddenInput
-from django.views.generic.edit import CreateView
-from .models import Rating, Project
+from django.forms import ModelForm
+# from django.views.generic.edit import CreateView
+from .models import Rating
 from captcha.fields import CaptchaField
 
 

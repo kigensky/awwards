@@ -3,11 +3,13 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
 class Project(models.Model):
-    image = models.ImageField(upload_to='awwwards/')
+    cloudinary_image = CloudinaryField('image', null=True)
+    # image = models.ImageField(upload_to='awwards/')
     title = models.CharField(max_length=100)
     description = models.TextField()
     link = models.CharField(max_length=100)
@@ -18,7 +20,7 @@ class Project(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('awwward-detail', kwargs={'pk': self.pk})
+        return reverse('awwards-detail', kwargs={'pk': self.pk})
 
 
 class Rating(models.Model):
@@ -48,7 +50,7 @@ class Rating(models.Model):
         return f"{self.creator.username} rating for {self.project.title}"
 
     def get_absolute_url(self):
-        return reverse('awwward-detail', kwargs={'pk': self.pk})
+        return reverse('awwards-detail', kwargs={'pk': self.pk})
 
     def get_average_percentage(self):
         avg = ((self.design+self.usability+self.content)/3)*10

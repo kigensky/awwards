@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-# from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView
 from .models import Rating
 from captcha.fields import CaptchaField
 

@@ -32,7 +32,7 @@ class ProjectListView(ListView):
 
 class ProjectCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Project
-    fields = ['image', 'title', 'description', 'link']
+    fields = ['cloudinary_image', 'title', 'description', 'link']
     success_message = "The Project %(title) was created successfully!"
 
     def form_valid(self, form):
@@ -42,7 +42,7 @@ class ProjectCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 class ProjectUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Project
-    fields = ['image', 'title', 'description', 'link']
+    fields = ['cloudinary_image', 'title', 'description', 'link']
     success_message = "The Project %(title) was updated successfully!"
 
     def form_valid(self, form):

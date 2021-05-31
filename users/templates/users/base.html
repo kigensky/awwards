@@ -1,4 +1,5 @@
 {% load static %}
+{% load cloudinary %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://assets.awwwards.com/assets/images/favicon.svg" type="image/svg+xml">
+    
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
@@ -20,11 +21,11 @@
       type="text/css"
       href="{% static 'users/main.css' %}"
     />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
     {% if title %}
-    <title>Awwward | {{title}}</title>
+    <title>Awwards | {{title}}</title>
     {% else %}
-    <title>Awwward</title>
+    <title>Awwards</title>
     {% endif %}
   </head>
   <body id="sessions">
@@ -32,10 +33,10 @@
       <header>
         <!-- Fixed navbar -->
         <nav
-          class="navbar navbar-expand-md navbar-light fixed-top bg-white text-dark border-bottom"
+          class="navbar navbar-expand-md navbar-dark fixed-top bg-black text-light border-bottom"
         >
           <div class="container-fluid mx-5 float-md-start">
-            <a class="navbar-brand" href="{% url 'awwward-home' %}">
+            <a class="navbar-brand" href="{% url 'awwards-home' %}">
               <svg width="141" height="22.3" viewBox="0 0 280 44.3">
                 <path
                   class="logo-fill"
@@ -92,13 +93,13 @@
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="{% url 'awwward-home' %}"
+                    href="{% url 'awwards-home' %}"
                     >Home</i
                   ></a>
                 </li>                
                   {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'awwward-create' %}"
+                  <a class="nav-link" href="{% url 'awwards-create' %}"
                     >Add Project</a
                   >
                 </li>

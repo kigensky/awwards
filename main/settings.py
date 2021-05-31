@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'coverage',
     'awwards',
     'users',
+    'my_api',
 ]
 
 MIDDLEWARE = [
@@ -185,14 +186,27 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_REDIRECT_URL= "/"
-LOGOUT_REDIRECT_URL="/account/login/"
+LOGOUT_REDIRECT_URL="/"
 
 
 cloudinary.config( 
-   cloud_name = "dh0tqdg08", 
+  cloud_name = "dh0tqdg08", 
   api_key = "721889788919147", 
   api_secret = "oonANg45wFmzdg3FZyCyjhPBvds" 
 )
+
+
+# CLOUD_NAME="dh0tqdg08"
+# API_KEY="721889788919147"
+# API_SECRET="oonANg45wFmzdg3FZyCyjhPBvds"
+# CLOUDINARY_STORAGE ={
+#     'CLOUD_NAME': os.environ.get('CLOUD_NAME'),
+#     'API_KEY': os.environ.get('API_KEY'),
+#     'API_SECRET': os.environ.get('API_SECRET'),
+# }
+
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Configure Django App for Heroku.
 

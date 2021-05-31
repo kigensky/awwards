@@ -1,4 +1,7 @@
-{% extends 'awwards/base.html' %} {% load static %} {% load crispy_forms_tags %}{% block content %}
+{% extends 'awwards/base.html' %} 
+{% load static %} 
+{% load crispy_forms_tags %}
+{% block content %}
 <div class="row pt-3">
   <div class="col-md-12">
     <p><strong> Site of the Day </strong> {{ now | date:"D d M Y"}}</p>
@@ -10,7 +13,7 @@
       <div class="card border-0 shadow h-100 ">
         <img
           class="card-img-top"
-          src="{{project.image.url}}"
+          src="{{project.cloudinary_image.url}}"
           alt="Card image cap"
         />
         <div class="card-body">

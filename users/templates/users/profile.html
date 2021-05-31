@@ -1,5 +1,6 @@
-{% extends 'awwward/base.html' %} {% block content %} {% load
-crispy_forms_tags%}
+{% extends 'awwards/base.html' %} 
+{% block content %} 
+{% load crispy_forms_tags%}
 <div class="row">
   <div class="col-sm-12 col-md-4 text-center">
     <div class="image_outer_container">
@@ -67,7 +68,7 @@ crispy_forms_tags%}
         <small class="text-uppercase m-3 pt-2">by {{project.creator}}</small>
 
         <a
-          href="{% url 'awwward-detail' project.id %}"
+          href="{% url 'awwards-detail' project.id %}"
           class="btn btn-outline-secondary btn-sm float-end m-2"
           >Details</a
         >

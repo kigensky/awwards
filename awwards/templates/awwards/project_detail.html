@@ -2,12 +2,14 @@
 {% load crispy_forms_tags %} 
 {% load static %} 
 {% block content %}
+{%load cloudinary %}
+
 <div class="row">
     <div class="col-md-6 mb-3">
       <div class="card border-0 shadow">
         <img
           class="card-img-top"
-          src="{{project.image.url}}"
+          src="{{project.cloudinary_image.url}}"
           alt="Card image cap"
         />
         <div class="card-header">

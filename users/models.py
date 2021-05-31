@@ -1,10 +1,10 @@
 from django.db import models
-
-# Create your models here.
 from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
 from phone_field import PhoneField
+
+# Create your models here.
 
 
 class Profile(models.Model):

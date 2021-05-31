@@ -9,7 +9,6 @@ from cloudinary.models import CloudinaryField
 
 class Project(models.Model):
     cloudinary_image = CloudinaryField('image', null=True)
-    # image = models.ImageField(upload_to='awwards/')
     title = models.CharField(max_length=100)
     description = models.TextField()
     link = models.CharField(max_length=100)

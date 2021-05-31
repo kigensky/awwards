@@ -8,9 +8,7 @@ This is an application that looks works like the awwards web application
   
 ##  Live Link  
  Click [View Site](kigen-awwards.herokuapp.com/)  to visit the site
-  
 
- 
 ## User Story  
   
 * View posted projects and their details

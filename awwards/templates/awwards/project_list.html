@@ -1,0 +1,32 @@
+{% extends 'awwards/base.html' %} {% load static %} {% load crispy_forms_tags %}{% block content %}
+<div class="row pt-3">
+  <div class="col-md-12">
+    <p><strong> Site of the Day </strong> {{ now | date:"D d M Y"}}</p>
+  </div>
+</div>
+<div class="row">
+      {% for project in object_list %}
+    <div class="col-md-4 mb-5">
+      <div class="card border-0 shadow h-100 ">
+        <img
+          class="card-img-top"
+          src="{{project.image.url}}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{project.creator}}</strong><span class="float-end text muted "><small>{{project.timestamp| date:"D d M Y"}}</small></span></h5>
+          
+        
+        </div>
+        <div class="card-footer">
+          <small class="text-uppercase m-3 pt-2">by {{project.creator}}</small>
+
+          <a href="{% url 'awwards-detail' project.id %}" class="btn btn-outline-secondary btn-sm float-end m-2">Details</a>
+
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

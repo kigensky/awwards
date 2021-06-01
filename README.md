@@ -7,7 +7,7 @@
 This is an application that looks works like the awwards web application
   
 ##  Live Link  
- Click [View Site](kigen-awwards.herokuapp.com/)  to visit the site
+ Click [View Site](https://kigen-awwards.herokuapp.com/)  to visit the site
  
  ## Screenshot
  

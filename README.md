@@ -8,6 +8,10 @@ This is an application that looks works like the awwards web application
   
 ##  Live Link  
  Click [View Site](kigen-awwards.herokuapp.com/)  to visit the site
+ 
+ ## Screenshot
+ 
+ <img src="https://raw.githubusercontent.com/kigensky/awwards/main/awwards/static/awwards/Screenshot from 2021-06-01 19-40-16.png" width="900px" height="440px">
 
 ## User Story  
   

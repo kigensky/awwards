@@ -6,7 +6,7 @@ from .views import (ProjectListView,ProjectDetailView,ProjectCreateView,ProjectD
 urlpatterns = [
     path('', ProjectListView.as_view(), name='awwards-home'),
     path('project/<int:pk>/', ProjectDetailView.as_view(), name='awwards-detail'),
-    path('awwards/', ProjectCreateView.as_view(), name='awwards-create'),
+    path('awwards/new', ProjectCreateView.as_view(), name='awwards-create'),
     path('awwards/<int:pk>/update/',ProjectUpdateView.as_view(), name='awwards-update'),
     path('awwards/<int:pk>/delete/',ProjectDeleteView.as_view(), name='awwards-delete'),
     path('awwards/<int:pk>/rate/',RatingCreateView.as_view(), name='add_rating'),
